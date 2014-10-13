@@ -1,6 +1,5 @@
 SpideyWeb
 =========
+![alt tag](https://github.com/mtamer/spideyweb/blob/master/web.png)
 
 Simple WebCrawler
-
-![alt tag](https://raw.github.com//mtamer/spideyweb/blob/master/web.png)
