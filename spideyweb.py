@@ -1,11 +1,8 @@
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup #modules BeautifulSoup
 
 #WebCrawler for one page
-#modules BeautifulSoup
-#url 
-# Do UsedOttawa Website
-def trade_spider(max_pages):
+def spiderweb(max_pages):
     page = 25
     while page <= max_pages:
         url = 'http://www.usedottawa.com/classifieds/all/' + str(page) + '?description=honda'
@@ -27,10 +24,10 @@ def get_single_item_data(item_url):
 	soup = BeautifulSoup(plain_text)
 	for item_name in soup.findAll('div',{'class':'article'}):
 		print(item_name.string)
-	for link in soup.findAll('a'):
-		href = "http://www.usedottawa.com/" + link.get('href')
-		print(href)
+	# for link in soup.findAll('p',{'class':'title'} ):
+	# 	href = "http://www.usedottawa.com/"+link.get('href')
+	# 	print(href)
 
 
 
-trade_spider(50) #of pages to crawl. 
+spiderweb(100) #of pages to crawl. 
